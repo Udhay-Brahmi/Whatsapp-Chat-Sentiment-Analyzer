@@ -3,16 +3,17 @@
 If you ever wonder who is the most positive person in your whatsapp group of let say 200+ or less members then this is what you are looking for.
 
 Not only posititve user, you can see the following results on overall group & individual as well :
-Monthly Activity map(Positive, Neutral, Negative)
-Daily Activity map(Positive, Neutral, Negative)
-Weekly Activity map(Positive, Neutral, Negative)
-Daily timeline(Positive, Neutral, Negative)
-Monthly timeline(Positive, Neutral, Negative)
-Percentage Contribution(Positive, Neutral, Negative)
-Word Cloud(Positive, Neutral, Negative)
-Most Common words(Positive, Neutral, Negative)
-Most user(Positive, Neutral, Negative)
-
+<ul>
+  <li>Monthly Activity map(Positive, Neutral, Negative)</li>
+  <li>Daily Activity map(Positive, Neutral, Negative)</li>
+  <li>Weekly Activity map(Positive, Neutral, Negative)</li>
+  <li>Daily timeline(Positive, Neutral, Negative)</li>
+  <li>Monthly timeline(Positive, Neutral, Negative)</li>
+  <li>Percentage Contribution(Positive, Neutral, Negative)</li>
+  <li>Word Cloud(Positive, Neutral, Negative)</li>
+  <li>Most Common words(Positive, Neutral, Negative)</li>
+  <li>Most user(Positive, Neutral, Negative)</li>
+</ul>
 You just have to perform the following task in order to get analysis.
 1.) Export whatsapp chat (24 hour format).
 2.) Browse the file.
