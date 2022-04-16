@@ -15,19 +15,22 @@ Not only posititve user, you can see the following results on overall group & in
   <li>Most user(Positive, Neutral, Negative)</li>
 </ul>
 You just have to perform the following task in order to get analysis.
-1.) Export whatsapp chat (24 hour format).
-2.) Browse the file.
-3.) Click Show Analysis.
-
+<ul>
+  <li>1.) Export whatsapp chat (24 hour format).</li>
+  <li>2.) Browse the file.</li>
+  <li>3.) Click Show Analysis.</li>
+</ul>
 Librray + Language + Platform used :
-Streamlit web
-Python 3.9
-nltk libraray
-matplotlib library
-pandas library
-wordcloud library
-seaborn library
-urlextract library
-emoji library
-Pycharm
+<ol>
+  <li>Streamlit web</li>
+  <li>Python 3.9</li>
+  <li>nltk libraray</li>
+  <li>matplotlib library</li>
+  <li>pandas library</li>
+  <li>wordcloud library</li>
+  <li>seaborn library</li>
+  <li>urlextract library</li>
+  <li>emoji library</li>
+  <li>Pycharm</li>
+</ol>
 </h5>
