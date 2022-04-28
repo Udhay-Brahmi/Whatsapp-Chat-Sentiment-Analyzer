@@ -60,7 +60,7 @@ streamlit run app.py
 
 ## Demo video
 
-[Manga recommendation system](https://www.youtube.com/watch?v=XCLCOA9BXVA)
+[Whatsapp chat sentiment analyzer](https://www.youtube.com/watch?v=XCLCOA9BXVA)
  
 ## Author
 
