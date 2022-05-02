@@ -1,3 +1,4 @@
+# Importing modules
 import nltk
 import streamlit as st
 import re
@@ -6,20 +7,40 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+# App title
 st.sidebar.title("Whatsapp Chat  Sentiment Analyzer")
+
+# VADER : is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments.
 nltk.download('vader_lexicon')
+
+# File upload button
 uploaded_file = st.sidebar.file_uploader("Choose a file")
+
+# Main heading
 st. markdown("<h1 style='text-align: center; color: grey;'>Whatsapp Chat  Sentiment Analyzer</h1>", unsafe_allow_html=True)
 
 if uploaded_file is not None:
+    
+    # Getting byte form & then decoding
     bytes_data = uploaded_file.getvalue()
     d = bytes_data.decode("utf-8")
+    
+    # Perform preprocessing
     data = preprocessor.preprocess(d)
+    
+    # Importing SentimentIntensityAnalyzer class from "nltk.sentiment.vader"
     from nltk.sentiment.vader import SentimentIntensityAnalyzer
+    
+    # Object
     sentiments = SentimentIntensityAnalyzer()
-    data["po"] = [sentiments.polarity_scores(i)["pos"] for i in data["message"]]
-    data["ne"] = [sentiments.polarity_scores(i)["neg"] for i in data["message"]]
-    data["nu"] = [sentiments.polarity_scores(i)["neu"] for i in data["message"]]
+    
+    # Creating different columns for (Positive/Negative/Neutral)
+    data["po"] = [sentiments.polarity_scores(i)["pos"] for i in data["message"]] # Positive
+    data["ne"] = [sentiments.polarity_scores(i)["neg"] for i in data["message"]] # Negative
+    data["nu"] = [sentiments.polarity_scores(i)["neu"] for i in data["message"]] # Neutral
+    
+    # To indentify true sentiment per row in message column
     def sentiment(d):
         if d["po"] >= d["ne"] and d["po"] >= d["nu"]:
             return 1
@@ -28,11 +49,21 @@ if uploaded_file is not None:
         if d["nu"] >= d["po"] and d["nu"] >= d["ne"]:
             return 0
 
+    # Creating new column & Applying function
     data['value'] = data.apply(lambda row: sentiment(row), axis=1)
+    
+    # User names list
     user_list = data['user'].unique().tolist()
+    
+    # Sorting
     user_list.sort()
+    
+    # Insert "Overall" at index 0
     user_list.insert(0, "Overall")
+    
+    # Selectbox
     selected_user = st.sidebar.selectbox("Show analysis wrt", user_list)
+    
     if st.sidebar.button("Show Analysis"):
         # Monthly activity map
         col1, col2, col3 = st.columns(3)
