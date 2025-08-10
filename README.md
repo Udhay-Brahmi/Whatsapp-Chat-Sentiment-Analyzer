@@ -19,11 +19,6 @@ You just have to perform the following task in order to get analysis.
 - Browse the file.
 - Click Show Analysis.
 
-## Deployed link
-
-[click here](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa19ucTE0WG9IdmFKNVhMSnlCNzJWVWxGV25NUXxBQ3Jtc0ttREhtME5RTzdNUFRQLXk0cl95SXQzR01wRHRfUHFjVmFoSEtJM21Nb0ZsU3lFdmVMTVV3cFhDSEhldFNSdDctUTl3S01kU3dOS3A0X1BONkhzUW5Pc1ZETi0xaFRQYUg2Y3BzM1poSTliNGE3RU5LMA&q=https%3A%2F%2Fwhatsapp-sentiment-analyzer.herokuapp.com%2F&v=M8AlfcW0M70)
-
-
 ## Run locally
 
 Create new project in pycharm and add above files. After that open terminal and run the following command. This will install all the modules needed to run this app. 
